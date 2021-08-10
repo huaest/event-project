@@ -48,7 +48,8 @@ $(function () {
 
         if (res.status == 0) {
           layer.msg("登入成功！");
-          location.href = "/index.html";
+          // 不要加 '  /  '
+          location.href = "index.html";
           // 保存返回的token 于  localStorage中，便于后续的使用
           localStorage.setItem('token',res.token)
         } else {
