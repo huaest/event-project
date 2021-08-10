@@ -1,3 +1,6 @@
+#logo_head {
+  user-select: none;
+}
 .layui-footer {
   text-align: center;
 }

@@ -1,6 +1,6 @@
 $(function () {
   // 获取用户信息
-  getUserInfor();
+  getUserInfo();
 
   // 退出模快
   var layer = layui.layer; // 必須要通過layui來獲取！
@@ -18,7 +18,7 @@ $(function () {
   });
 });
 
-function getUserInfor() {
+function getUserInfo() {
   $.ajax({
     method: "GET",
     url: "/my/userinfo",
