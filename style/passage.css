@@ -1,0 +1,34 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,html{
+  background-color: #f2f3f5;
+  padding: 20px;
+}
+.layui-card{
+  padding: 10px;
+}
+.layui-form{
+    width: 600px;
+}
+
+#btnShowAdd{
+    float: right;
+}
+.add_rm_btn{
+    width: 150px;
+}
+
+#form-edit{
+    width: 400px;
+    margin: 0px;
+}
+#form-add{
+  width: 400px;
+  margin: 0px;
+}
+

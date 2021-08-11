@@ -31,7 +31,6 @@ $(function () {
         avatar:reader.result
        },
        success: function (response) {
-           console.log(reader.result);
        }
    });
   });

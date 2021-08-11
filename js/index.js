@@ -46,7 +46,6 @@ function getHead(user) {
   $(".user-name").html("欢迎，" + name);
   //  渲染头像
   var picture = user.user_pic;
-  console.log(user);
   if (picture !== null) {
     $(".non-head").hide();
     $(".user-img").attr("src", picture).show();
