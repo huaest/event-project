@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tools/layui-v2.6.8/layui/css/layui.css">
+    <link rel="stylesheet" href="style/add_art.css">
+    <script src="tools/jq.js"></script>
+    <script src="tools/template-web.js"></script>
+    <script src="tools/layui-v2.6.8/layui/layui.js"></script>
+    <script src="js/baseAPI.js"></script>
+    <script src="js/add_atr.js"></script>
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">添加文章</div>
+        <div class="layui-card-body">
+            <form class="layui-form" id="public_art">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">文章标题</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入标题"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">文章类别</label>
+                    <div class="layui-input-block">
+                        <select name="cate_id" lay-verify="required" id="art_select">
+                            <option value="">请选择分类</option>
+                            <option value="0">北京</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">文本域</label>
+                    <div class="layui-input-block">
+                        <textarea name="content" placeholder="请输入内容" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <input type="hidden" name="cover_img" >
+                </div>
+                <div class="layui-form-item">
+                   <input type="hidden" name="state">
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo" id="pub">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary" id="res">存为草稿</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script id="kind_show" type="text/html">
+        <option value="">请选择分类</option>
+        {{each data}}
+        <option value="{{$value.name}}">{{$value.name}}</option>
+        {{/each}}                     
+    </script>
+</body>
+
+</html>

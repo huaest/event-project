@@ -7,7 +7,6 @@ $(function () {
   // 添加文章
   $("body").on("submit", "#form-add", function (e) {
     e.preventDefault();
-    console.log(123);
     $.ajax({
       type: "POST",
       url: "/my/article/addcates",
@@ -53,7 +52,6 @@ $(function () {
       content: $("#edit").html(),
     });
     $("#hidden_id").val($(this).attr("btn_id"));
-    console.log($(this).attr("btn_id"));
     $.ajax({
       type: "GET",
       url: "/my/article/cates/" + $(this).attr("btn_id"),
@@ -63,7 +61,7 @@ $(function () {
       },
     });
 
-    //修改文章内容
+    //修改类别内容
     $("body").on("submit", "#form-edit", function (e) {
       e.preventDefault();
       $.ajax({
@@ -74,12 +72,12 @@ $(function () {
           if (response.status != 0) return console.log("修改失败");
           getArticle();
           layer.msg("修改成功");
-          layer.close(layerIndex)
+          layer.close(layerIndex);
         },
       });
     });
   });
-
+  //删除类别
   $("body").on("click", "#delete_btn", function (e) {
     e.preventDefault();
     var deleteid = $(this).attr("btn_id");
